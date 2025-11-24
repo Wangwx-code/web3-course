@@ -35,6 +35,7 @@ contract Begging {
         }
         _addRank(donater, amount);
         _donations[donater] += amount;
+        emit Donation(donater, amount);
     }
 
     function _addRank(address donater, uint256 amount) private {
